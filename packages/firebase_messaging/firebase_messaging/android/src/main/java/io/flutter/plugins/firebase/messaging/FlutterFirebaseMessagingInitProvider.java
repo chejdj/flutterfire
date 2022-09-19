@@ -25,8 +25,8 @@ public class FlutterFirebaseMessagingInitProvider extends ContentProvider {
       Context context = getContext();
       if (context != null && context.getApplicationContext() != null) {
         context = context.getApplicationContext();
+        ContextHolder.setApplicationContext(context);
       }
-      ContextHolder.setApplicationContext(context);
     }
     return false;
   }
